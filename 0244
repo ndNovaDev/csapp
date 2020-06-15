@@ -1,0 +1,14 @@
+A: true
+false: TMin
+
+B: true
+C: false
+D: true
+E: true
+false: TMin
+
+F: false
+true
+
+G: ?
+true
