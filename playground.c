@@ -1,11 +1,6 @@
-#include <stdio.h>
+long mult2(long, long);
 
-void inplace_swap(int *x, int *y) {
-  *y = *x ^ *y;
-  *x = *x ^ *y;
-  *y = *x ^ *y;
-}
-
-int main() {
-  return 0;
+void multstore(long x, long y, long *dest) {
+  long t = mult2(x, y);
+  *dest = t;
 }
