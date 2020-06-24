@@ -1,0 +1,32 @@
+rax eax ax al
+rdi edi di dil
+rsi esi si sil
+
+
+long => long:
+movq (%rdi), %rax
+movq %rax, (%rsi)
+
+char => int:
+movsbl (%rdi), %eax
+movl %eax, (%rsi)
+
+char => unsigned:
+movzbl (%rdi), %eax 答案是movsbl
+movl %eax, (%rsi)
+
+unsigned char => long:
+movzbq (%rdi), %rax 答案是 movzbl (%rdi), %eax
+movq %rax, (%rsi)
+
+int => char:
+movl (%rdi), %eax
+movb %al (%rsi)
+
+unsigned => unsigned char:
+movl (%rdi), %eax
+movb %al, (%rsi)
+
+char => short:
+movsbw (%rdi), %ax
+movw %ax, (%rsi)
