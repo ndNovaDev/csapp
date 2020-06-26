@@ -1,0 +1,7 @@
+A:
+x: %rax
+y: %rcx
+n: %rdx
+
+B:不知道怎么表达
+C:pass
