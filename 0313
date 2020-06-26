@@ -1,0 +1,9 @@
+A: 
+int <
+B:
+short >=
+C:
+unsigned char <=
+D:
+long !=
+unsigned long !=

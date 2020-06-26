@@ -1,0 +1,12 @@
+A:
+long >=
+B: 
+short == 
+unsigned short == 
+C:
+unsigned char >
+D:
+int != 
+unsigned int !=
+
+答案是 int <= ????/
