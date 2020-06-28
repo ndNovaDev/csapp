@@ -1,0 +1,3 @@
+A: rdi, rdi + 1 ... rdi + 5
+B: rdi + 6, rdi + 7
+C: 不够
