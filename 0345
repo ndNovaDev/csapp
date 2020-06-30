@@ -1,0 +1,19 @@
+A:
+0 8 16 24 28 32 40 48
+
+B:
+56
+
+C:
+struct {
+  char *a;
+  double c;
+  long g;
+  float e;
+  int h;
+  short b;
+  char d;
+  char f;
+}
+
+0 8 16 24 28 32 34 35 | 40

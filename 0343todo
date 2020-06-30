@@ -1,0 +1,24 @@
+typedef union {
+  struct {
+    long u;
+    short v;
+    char w;
+  } t1;
+  struct {
+    int a[2];
+    char *p;
+  } t2;
+} u_type;
+
+up: %rdi
+dest: %rsi
+
+up->t1.u long
+movq(%rdi), %rax
+movq %rax, (%rsi)
+
+up->t1.v short
+movw (%di), %ax
+movw %ax, (%si)
+
+&up->t1.w long
