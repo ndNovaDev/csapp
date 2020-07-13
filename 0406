@@ -1,0 +1,22 @@
+absSum
+条件传送
+
+sum:
+  irmovq $8,%r8
+  irmovq $1,%r9
+  xorq %rax,%rax
+  andq %rsi,%rsi
+  jmp test
+loop:
+  mrmovq (%rdi),%r10
+  mrmovq (%rax),%r11
+  mrmovq (%rax),%r12
+  addq %r10,%r11
+  subq %r10,%r12
+  cmovl %r11,%rax
+  cmovge %r12,%rax
+  addq %r8,%rdi
+  subq %r9,%rsi
+test:
+  jne loop
+  ret
