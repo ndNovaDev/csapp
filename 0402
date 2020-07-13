@@ -1,0 +1,45 @@
+A. 0x100: 30 f3 fcffffffffffffff | 40 63 0008000000000000
+B. 0x200: a0 6f 800c020000000000 | 00 | 00 | 30 f3 0a00000000000000#
+B. 0x200: a0 6f | 80 0c02000000000000 | 00 | 30 f3 0a00000000000000 | 90
+C. 0x300: 50 54 0700000000000000 | 10 | f0b01f
+D. 0x400: 61 13 | 73 0004000000000000 | 00
+E. 0x500: 63 62 | a0 f0
+
+A:
+0x100: irmovq $-4, %rbx
+0x10A: rmmovq %rsi, 4690(%rbx) #
+0x10A: rmmovq %rsi, 0x800(%rbx)
+0x114: halt
+
+B: #
+0x200: pushq %rsi, $134272
+0x20A: halt
+0x20B: halt
+0x20C: irmovq $10, %rbx
+
+B: 
+0x200: pushq (%rsi)
+0x202: call 0x20C
+0x20B: halt
+0x20C: irmovq %10, %rbx
+0x216: ret
+
+C:
+0x300: mrmovq 7(%rbp), %rsp
+0x30A: nop
+f0???
+
+D:
+0x400: loop
+0x400: subq %rcx, %rbx
+0x402: je loop
+0x40B: halt
+
+E:
+0x500: xorq %rsi, %rdx
+push f???
+
+
+
+
+
