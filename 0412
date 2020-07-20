@@ -1,0 +1,5 @@
+word Mid = [
+  B <= A && A <= C: A;
+  A <= B && B <= C: B;
+  1: C;
+];
