@@ -1,0 +1,14 @@
+取指：
+icode:ifun <- M1[0x016] = 3:0
+rA:rB <- M1[0x017] = f:4
+valC <- M8[0x018] = 128
+valP <- PC + 10 = 0x020
+译码：
+执行：
+valE <- 0 + valC = 128
+访存：
+写回：
+R[%rsp] <- valE = 128
+更新PC：
+PC <- valP = 0x020
+
