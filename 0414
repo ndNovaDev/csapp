@@ -1,0 +1,18 @@
+0x20c b00f => popq %rax
+
+取指：
+icode:ifun <- M1[0x20c] = b:0
+rA:rB <- M1[0x20d] = 0:f
+valP <- 0x20c + 2 = 0x20e
+译码：
+valA <- R[%rsp] = 120
+valB <- R[%rsp] = 120
+执行：
+valE <- 120 + 8 = 128
+访存：
+valM <- M8[120] = 9
+写回：
+R[%rsp] <- valE = 128
+R[0] <- 9
+更新PC：
+PC <- 0x20e
