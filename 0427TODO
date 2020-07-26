@@ -1,0 +1,12 @@
+Stat
+SAOK：正常操作
+SADR：地址异常
+SINS：非法指令
+SHLT：halt
+
+word Stat = [
+  imem_error || dmem_error: SADR;
+  !instr_Valid: SINS;
+  icode == IHALT : SHLT;
+  1: SAOK;
+]

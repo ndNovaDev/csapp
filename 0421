@@ -1,0 +1,11 @@
+word dstE = [
+  icode in {IRRMOVQ} : rB;
+  icode in {IIRMOVQ, IOPQ}: rB;
+  icode in (IPUSHQ, IPOPQ, ICALL, IRET) : RRSP;
+  1: RNONE;
+]
+
+word dstM = [
+  icode in {IMRMOVQ, IPOPQ} : rA;
+  1: RNONE;
+]
