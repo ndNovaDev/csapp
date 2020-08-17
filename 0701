@@ -1,0 +1,13 @@
+buf YES 外部 m.o COMMON
+bufp0 YES 局部 swap.o .bss
+bufp1 YES 局部 swap.o .bss
+swap YES  局部 swap.o .text
+temp NO
+
+********************
+
+buf YES 外部 main.o .data
+bufp0 YES 全局 swap.o .data
+bufp1 YES 全局 swap.o COMMON
+swap YES  全局 swap.o .text
+temp NO
