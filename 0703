@@ -1,0 +1,7 @@
+A: p libx
+B: p libx liby
+C: p libx liby libx p
+
+********************
+
+C: p libx liby libx
